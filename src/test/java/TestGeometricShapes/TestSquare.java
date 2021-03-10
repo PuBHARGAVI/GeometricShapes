@@ -46,4 +46,14 @@ public class TestSquare {
 
         assertEquals(expectedPerimeter,actualPerimeter);
     }
+
+    @Test
+    void testPerimeterIsZeroForSideValueZero() {
+        int expectedPerimeter = 0;
+
+        Square square =new Square(0);
+        int actualPerimeter = (int) square.perimeter();
+
+        assertEquals(expectedPerimeter,actualPerimeter);
+    }
 }
