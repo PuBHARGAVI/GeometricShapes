@@ -17,12 +17,18 @@ public class TestRectangle {
     }
 
     @Test
-    void testAreaIsZeroForBothSideValuesZero() {
+    void testAreaIsZeroForAnySideValuesZero() {
         int expectedArea = 0;
 
-        Rectangle rectangle = new Rectangle(0, 0);
-        int actualArea = rectangle.area();
+        Rectangle rectangleWithBothSidesZero = new Rectangle(0, 0);
+        Rectangle rectangleWithLengthZero = new Rectangle(0, 4);
+        Rectangle rectangleWithBreadthZero = new Rectangle(5, 0);
+        int actualAreaWithBothSidesZero = rectangleWithBothSidesZero.area();
+        int actualAreaWithLengthZero = rectangleWithLengthZero.area();
+        int actualAreaWithBreadthZero = rectangleWithBreadthZero.area();
 
-        assertEquals(expectedArea, actualArea);
+        assertEquals(expectedArea, actualAreaWithBothSidesZero);
+        assertEquals(expectedArea, actualAreaWithLengthZero);
+        assertEquals(expectedArea, actualAreaWithBreadthZero);
     }
 }
