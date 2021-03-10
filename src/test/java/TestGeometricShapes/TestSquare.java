@@ -1,5 +1,6 @@
 package TestGeometricShapes;
 
+import GeometricShapes.Rectangle;
 import GeometricShapes.Square;
 import org.junit.jupiter.api.Test;
 
@@ -24,5 +25,15 @@ public class TestSquare {
         int actualArea = (int) square.area();
 
         assertEquals(expectedArea,actualArea);
+    }
+
+    @Test
+    void testAreaThrowsExceptionIfSideValueIsNegative() {
+        String expectedExceptionMessage = "Side Value Can't Be Negative";
+
+        Square square = new Square(-3);
+        String actualExceptionMessage = square.area().toString();
+
+        assertEquals(expectedExceptionMessage, actualExceptionMessage);
     }
 }
