@@ -1,6 +1,6 @@
-package RectangleTest;
+package TestGeometricShapes;
 
-import Rectangle.Rectangle;
+import GeometricShapes.Rectangle;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -90,4 +90,6 @@ public class TestRectangle {
         assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.perimeter());
         assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.perimeter());
     }
+
+
 }

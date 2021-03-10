@@ -1,2 +1,4 @@
-RectangleTest/TestRectangle.java
- RectangleTest.TestRectangle
+TestGeometricShapes/TestRectangle.java
+ TestGeometricShapes.TestRectangle
+TestGeometricShapes/TestSquare.java
+ TestGeometricShapes.TestSquare

@@ -1,7 +1,7 @@
-package Rectangle;
+package GeometricShapes;
 
 public class Rectangle {
-    final int length, breadth;
+    int length, breadth;
 
     public Rectangle(int length, int breadth) {
         this.length = length;
