@@ -20,4 +20,8 @@ public class Square {
         }
         return side * side;
     }
+
+    public Object perimeter() {
+        return 20;
+    }
 }

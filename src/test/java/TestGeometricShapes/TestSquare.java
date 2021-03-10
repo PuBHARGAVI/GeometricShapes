@@ -36,4 +36,14 @@ public class TestSquare {
 
         assertEquals(expectedExceptionMessage, actualExceptionMessage);
     }
+
+    @Test
+    void testPerimeterIsPositiveForPositiveSide() {
+        int expectedPerimeter = 20;
+
+        Square square =new Square(5);
+        int actualPerimeter = (int) square.perimeter();
+
+        assertEquals(expectedPerimeter,actualPerimeter);
+    }
 }
