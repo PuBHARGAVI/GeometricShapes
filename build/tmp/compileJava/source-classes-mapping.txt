@@ -1,6 +1,6 @@
 GeometricShapes/Rectangle.java
  GeometricShapes.Rectangle
-GeometricShapes/Square.java
- GeometricShapes.Square
 GeometricShapes/NegativeSideValueException.java
  GeometricShapes.NegativeSideValueException
+GeometricShapes/Square.java
+ GeometricShapes.Square

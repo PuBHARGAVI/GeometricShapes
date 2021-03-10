@@ -15,4 +15,14 @@ public class TestSquare {
 
         assertEquals(expectedArea,actualArea);
     }
+
+    @Test
+    void testAreaIsZeroForSideValueZero() {
+        int expectedArea = 0;
+
+        Square square =new Square(0);
+        int actualArea = (int) square.area();
+
+        assertEquals(expectedArea,actualArea);
+    }
 }

@@ -1,12 +1,13 @@
 package GeometricShapes;
 
-public class Square{
+public class Square {
     int side;
-    public Square(int side){
+
+    public Square(int side) {
         this.side = side;
     }
 
     public Object area() {
-        return 25;
+        return side * side;
     }
 }
