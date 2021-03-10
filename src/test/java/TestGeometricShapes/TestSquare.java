@@ -56,4 +56,14 @@ public class TestSquare {
 
         assertEquals(expectedPerimeter,actualPerimeter);
     }
+
+    @Test
+    void testPerimeterThrowsExceptionIfSideValueIsNegative() {
+        String expectedExceptionMessage = "Side Value Can't Be Negative";
+
+        Square square = new Square(-3);
+        String actualExceptionMessage = square.perimeter().toString();
+
+        assertEquals(expectedExceptionMessage, actualExceptionMessage);
+    }
 }

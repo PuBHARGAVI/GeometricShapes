@@ -22,6 +22,11 @@ public class Square {
     }
 
     public Object perimeter() {
+        try {
+            CheckForNegativeSideValueException();
+        } catch (Exception ne) {
+            return ne.getMessage();
+        }
         return 4 * side;
     }
 }
