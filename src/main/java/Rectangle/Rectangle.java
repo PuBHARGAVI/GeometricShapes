@@ -2,7 +2,8 @@ package Rectangle;
 
 public class Rectangle {
     private final int length, breadth;
-    public Rectangle(int length, int breadth){
+
+    public Rectangle(int length, int breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -16,6 +17,6 @@ public class Rectangle {
     }
 
     public int area() {
-        return 20;
+        return length * breadth;
     }
 }
