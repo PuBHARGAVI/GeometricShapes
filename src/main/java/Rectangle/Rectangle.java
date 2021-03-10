@@ -23,6 +23,11 @@ public class Rectangle {
     }
 
     public Object perimeter() {
+        try {
+            CheckForNegativeSideValueException();
+        } catch (Exception ne) {
+            return ne.getMessage();
+        }
         return 2 * (length + breadth);
     }
 }

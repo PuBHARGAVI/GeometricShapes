@@ -77,4 +77,17 @@ public class TestRectangle {
         assertEquals(expectedPerimeterWithLengthZero, actualPerimeterWithLengthZero);
         assertEquals(expectedPerimeterWithBreadthZero,actualPerimeterWithBreadthZero);
     }
+
+    @Test
+    void testPerimeterThrowsExceptionIfAnySideValueIsNegative() {
+        String expectedExceptionMessage = "Side Value Can't Be Negative";
+
+        Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
+        Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
+        Rectangle rectangleWithBreadthNegative = new Rectangle(2, -5);
+
+        assertEquals(expectedExceptionMessage, rectangleWithBothSidesNegative.perimeter());
+        assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.perimeter());
+        assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.perimeter());
+    }
 }
