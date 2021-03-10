@@ -1,22 +1,24 @@
 package Rectangle;
 
 public class Rectangle {
-    private final int length, breadth;
+    final int length, breadth;
 
     public Rectangle(int length, int breadth) {
         this.length = length;
         this.breadth = breadth;
     }
 
-    public int getLength() {
-        return length;
+    public void CheckForNegativeSideValueException() throws NegativeSideValueException {
+        if (length < 0 || breadth < 0)
+            throw new NegativeSideValueException("Side Value Can't Be Negative");
     }
 
-    public int getBreadth() {
-        return breadth;
-    }
-
-    public int area() {
+    public Object area() {
+        try {
+            CheckForNegativeSideValueException();
+        } catch (Exception ne) {
+            return ne.getMessage();
+        }
         return length * breadth;
     }
 }

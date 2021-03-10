@@ -2,7 +2,6 @@ package RectangleTest;
 
 import Rectangle.Rectangle;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRectangle {
@@ -11,7 +10,7 @@ public class TestRectangle {
         int expectedArea = 20;
 
         Rectangle rectangle = new Rectangle(5, 4);
-        int actualArea = rectangle.area();
+        int actualArea = (int) rectangle.area();
 
         assertEquals(expectedArea, actualArea);
     }
@@ -23,12 +22,25 @@ public class TestRectangle {
         Rectangle rectangleWithBothSidesZero = new Rectangle(0, 0);
         Rectangle rectangleWithLengthZero = new Rectangle(0, 4);
         Rectangle rectangleWithBreadthZero = new Rectangle(5, 0);
-        int actualAreaWithBothSidesZero = rectangleWithBothSidesZero.area();
-        int actualAreaWithLengthZero = rectangleWithLengthZero.area();
-        int actualAreaWithBreadthZero = rectangleWithBreadthZero.area();
+        int actualAreaWithBothSidesZero = (int) rectangleWithBothSidesZero.area();
+        int actualAreaWithLengthZero = (int) rectangleWithLengthZero.area();
+        int actualAreaWithBreadthZero = (int) rectangleWithBreadthZero.area();
 
         assertEquals(expectedArea, actualAreaWithBothSidesZero);
         assertEquals(expectedArea, actualAreaWithLengthZero);
         assertEquals(expectedArea, actualAreaWithBreadthZero);
+    }
+
+    @Test
+    void testAreaThrowsExceptionIfAnySideValueIsNegative() {
+        String expectedExceptionMessage = "Side Value Can't Be Negative";
+
+        Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
+        Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
+        Rectangle rectangleWithBreadthNegative = new Rectangle(2, -5);
+
+        assertEquals(expectedExceptionMessage, rectangleWithBothSidesNegative.area());
+        assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.area());
+        assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.area());
     }
 }

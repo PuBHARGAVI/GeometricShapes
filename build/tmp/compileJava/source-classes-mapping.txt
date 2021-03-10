@@ -1,2 +1,4 @@
+Rectangle/NegativeSideValueException.java
+ Rectangle.NegativeSideValueException
 Rectangle/Rectangle.java
  Rectangle.Rectangle
