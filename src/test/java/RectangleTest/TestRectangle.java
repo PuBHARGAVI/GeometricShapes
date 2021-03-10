@@ -53,4 +53,14 @@ public class TestRectangle {
 
         assertEquals(expectedPerimeter, actualPerimeter);
     }
+
+    @Test
+    void testPerimeterIsZeroForBothSideValuesZero() {
+        int expectedPerimeter = 0;
+
+        Rectangle rectangle = new Rectangle(0, 0);
+        int actualPerimeter = (int) rectangle.perimeter();
+
+        assertEquals(expectedPerimeter, actualPerimeter);
+    }
 }
