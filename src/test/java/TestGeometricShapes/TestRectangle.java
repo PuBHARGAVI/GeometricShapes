@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRectangle {
     @Test
-    void testAreaIsPositiveForPositiveSideValues() {
+    void testRectangleAreaIsPositiveForPositiveSideValues() {
         int expectedArea = 20;
 
         Rectangle rectangle = new Rectangle(5, 4);
@@ -16,7 +16,7 @@ public class TestRectangle {
     }
 
     @Test
-    void testAreaIsZeroForAnySideValuesZero() {
+    void testRectangleAreaIsZeroForAnySideValuesZero() {
         int expectedArea = 0;
 
         Rectangle rectangleWithBothSidesZero = new Rectangle(0, 0);
@@ -32,20 +32,23 @@ public class TestRectangle {
     }
 
     @Test
-    void testAreaThrowsExceptionIfAnySideValueIsNegative() {
+    void testRectangleAreaThrowsExceptionIfAnySideValueIsNegative() {
         String expectedExceptionMessage = "Side Value Can't Be Negative";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
         Rectangle rectangleWithBreadthNegative = new Rectangle(2, -5);
+        String actualExceptionMessageWithBothSidesNegative = rectangleWithBothSidesNegative.area().toString();
+        String actualExceptionMessageWithLengthNegative = rectangleWithLengthNegative.area().toString();
+        String actualExceptionMessageWithBreadthNegative = rectangleWithBreadthNegative.area().toString();
 
-        assertEquals(expectedExceptionMessage, rectangleWithBothSidesNegative.area());
-        assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.area());
-        assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.area());
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesNegative);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthNegative);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthNegative);
     }
 
     @Test
-    void testPerimeterIsPositiveForPositiveSideValues() {
+    void testRectanglePerimeterIsPositiveForPositiveSideValues() {
         int expectedPerimeter = 18;
 
         Rectangle rectangle = new Rectangle(5, 4);
@@ -55,7 +58,7 @@ public class TestRectangle {
     }
 
     @Test
-    void testPerimeterIsZeroForBothSideValuesZero() {
+    void testRectanglePerimeterIsZeroForBothSideValuesZero() {
         int expectedPerimeter = 0;
 
         Rectangle rectangle = new Rectangle(0, 0);
@@ -65,7 +68,7 @@ public class TestRectangle {
     }
 
     @Test
-    void testPerimeterIsNotZeroForOneSideValueZero() {
+    void testRectanglePerimeterIsNotZeroForOneSideValueZero() {
         int expectedPerimeterWithLengthZero = 8;
         int expectedPerimeterWithBreadthZero = 10;
 
@@ -79,16 +82,19 @@ public class TestRectangle {
     }
 
     @Test
-    void testPerimeterThrowsExceptionIfAnySideValueIsNegative() {
+    void testRectanglePerimeterThrowsExceptionIfAnySideValueIsNegative() {
         String expectedExceptionMessage = "Side Value Can't Be Negative";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
         Rectangle rectangleWithBreadthNegative = new Rectangle(2, -5);
+        String actualExceptionMessageWithBothSidesNegative = rectangleWithBothSidesNegative.perimeter().toString();
+        String actualExceptionMessageWithLengthNegative = rectangleWithLengthNegative.perimeter().toString();
+        String actualExceptionMessageWithBreadthNegative = rectangleWithBreadthNegative.perimeter().toString();
 
-        assertEquals(expectedExceptionMessage, rectangleWithBothSidesNegative.perimeter());
-        assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.perimeter());
-        assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.perimeter());
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesNegative);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthNegative);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthNegative);
     }
 
 

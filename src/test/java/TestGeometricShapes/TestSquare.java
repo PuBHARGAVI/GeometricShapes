@@ -1,6 +1,5 @@
 package TestGeometricShapes;
 
-import GeometricShapes.Rectangle;
 import GeometricShapes.Square;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestSquare {
     @Test
-    void testAreaIsPositiveForPositiveSide() {
+    void testSquareAreaIsPositiveForPositiveSide() {
         int expectedArea = 25;
 
         Square square =new Square(5);
@@ -18,7 +17,7 @@ public class TestSquare {
     }
 
     @Test
-    void testAreaIsZeroForSideValueZero() {
+    void testSquareAreaIsZeroForSideValueZero() {
         int expectedArea = 0;
 
         Square square =new Square(0);
@@ -28,7 +27,7 @@ public class TestSquare {
     }
 
     @Test
-    void testAreaThrowsExceptionIfSideValueIsNegative() {
+    void testSquareAreaThrowsExceptionIfSideValueIsNegative() {
         String expectedExceptionMessage = "Side Value Can't Be Negative";
 
         Square square = new Square(-3);
@@ -38,7 +37,7 @@ public class TestSquare {
     }
 
     @Test
-    void testPerimeterIsPositiveForPositiveSide() {
+    void testSquarePerimeterIsPositiveForPositiveSide() {
         int expectedPerimeter = 20;
 
         Square square =new Square(5);
@@ -48,7 +47,7 @@ public class TestSquare {
     }
 
     @Test
-    void testPerimeterIsZeroForSideValueZero() {
+    void testSquarePerimeterIsZeroForSideValueZero() {
         int expectedPerimeter = 0;
 
         Square square =new Square(0);
@@ -58,7 +57,7 @@ public class TestSquare {
     }
 
     @Test
-    void testPerimeterThrowsExceptionIfSideValueIsNegative() {
+    void testSquarePerimeterThrowsExceptionIfSideValueIsNegative() {
         String expectedExceptionMessage = "Side Value Can't Be Negative";
 
         Square square = new Square(-3);
