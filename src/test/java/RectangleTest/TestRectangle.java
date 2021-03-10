@@ -63,4 +63,18 @@ public class TestRectangle {
 
         assertEquals(expectedPerimeter, actualPerimeter);
     }
+
+    @Test
+    void testPerimeterIsNotZeroForOneSideValueZero() {
+        int expectedPerimeterWithLengthZero = 8;
+        int expectedPerimeterWithBreadthZero = 10;
+
+        Rectangle rectangleWithLengthZero = new Rectangle(0, 4);
+        Rectangle rectangleWithBreadthZero = new Rectangle(5,0);
+        int actualPerimeterWithLengthZero = (int) rectangleWithLengthZero.perimeter();
+        int actualPerimeterWithBreadthZero = (int) rectangleWithBreadthZero.perimeter();
+
+        assertEquals(expectedPerimeterWithLengthZero, actualPerimeterWithLengthZero);
+        assertEquals(expectedPerimeterWithBreadthZero,actualPerimeterWithBreadthZero);
+    }
 }
