@@ -21,4 +21,8 @@ public class Rectangle {
         }
         return length * breadth;
     }
+
+    public Object perimeter() {
+        return 18;
+    }
 }

@@ -43,4 +43,14 @@ public class TestRectangle {
         assertEquals(expectedExceptionMessage, rectangleWithLengthNegative.area());
         assertEquals(expectedExceptionMessage, rectangleWithBreadthNegative.area());
     }
+
+    @Test
+    void testPerimeterIsPositiveForPositiveSideValues() {
+        int expectedPerimeter = 18;
+
+        Rectangle rectangle = new Rectangle(5, 4);
+        int actualPerimeter = (int) rectangle.perimeter();
+
+        assertEquals(expectedPerimeter, actualPerimeter);
+    }
 }
