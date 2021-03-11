@@ -27,7 +27,7 @@ public class TestSquare {
 
     @Test
     void testSquareAreaThrowsExceptionIfSideValueIsNegative() {
-        String expectedExceptionMessage = "Side Value Can't Be Negative";
+        String expectedExceptionMessage = "Square Side Do Not Support Negative Value";
 
         Square square = new Square(-3);
         String actualExceptionMessage = square.area().toString();
@@ -57,7 +57,7 @@ public class TestSquare {
 
     @Test
     void testSquarePerimeterThrowsExceptionIfSideValueIsNegative() {
-        String expectedExceptionMessage = "Side Value Can't Be Negative";
+        String expectedExceptionMessage = "Square Side Do Not Support Negative Value";
 
         Square square = new Square(-3);
         String actualExceptionMessage = square.perimeter().toString();
