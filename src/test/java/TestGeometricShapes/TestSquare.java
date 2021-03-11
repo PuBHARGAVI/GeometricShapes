@@ -16,13 +16,13 @@ public class TestSquare {
     }
 
     @Test
-    void testSquareAreaIsZeroForSideValueZero() {
-        int expectedArea = 0;
+    void testSquareAreaThrowsExceptionIfSideValueIsZero() {
+        String expectedExceptionMessage = "Square Side Do Not Support Zero Value";
 
-        Square square =new Square(0);
-        int actualArea = (int) square.area();
+        Square square = new Square(0);
+        String actualExceptionMessage = square.area().toString();
 
-        assertEquals(expectedArea,actualArea);
+        assertEquals(expectedExceptionMessage, actualExceptionMessage);
     }
 
     @Test
@@ -46,13 +46,13 @@ public class TestSquare {
     }
 
     @Test
-    void testSquarePerimeterIsZeroForSideValueZero() {
-        int expectedPerimeter = 0;
+    void testSquarePerimeterThrowsExceptionIfSideValueIsZero() {
+        String expectedExceptionMessage = "Square Side Do Not Support Zero Value";
 
-        Square square =new Square(0);
-        int actualPerimeter = (int) square.perimeter();
+        Square square = new Square(0);
+        String actualExceptionMessage = square.perimeter().toString();
 
-        assertEquals(expectedPerimeter,actualPerimeter);
+        assertEquals(expectedExceptionMessage, actualExceptionMessage);
     }
 
     @Test

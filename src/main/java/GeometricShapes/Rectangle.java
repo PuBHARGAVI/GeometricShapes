@@ -9,8 +9,10 @@ public class Rectangle {
     }
 
     private void CheckForZeroSideValueException() throws ZeroSideValueException {
-        if ((length == 0 || breadth == 0 ) && length != breadth)
+        if ((length == 0 || breadth == 0) && length != breadth)
             throw new ZeroSideValueException("Rectangle Sides Do Not Support Zero Value");
+        else if (length == 0)
+            throw new ZeroSideValueException("Square Side Do Not Support Zero Value");
     }
 
     private void CheckForNegativeSideValueException() throws NegativeSideValueException {
