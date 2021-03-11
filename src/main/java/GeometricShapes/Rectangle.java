@@ -9,8 +9,8 @@ public class Rectangle {
     }
 
     public void CheckForNegativeSideValueException() throws NegativeSideValueException {
-        if (length < 0 || breadth < 0)
-            throw new NegativeSideValueException("Side Value Can't Be Negative");
+        if (length < 0 || breadth < 0 && length != breadth)
+            throw new NegativeSideValueException("Rectangle Sides Do Not Support Negative And Zero Value");
     }
 
     public Object area() {

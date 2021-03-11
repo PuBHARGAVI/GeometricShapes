@@ -33,7 +33,7 @@ public class TestRectangle {
 
     @Test
     void testRectangleAreaThrowsExceptionIfAnySideValueIsNegative() {
-        String expectedExceptionMessage = "Side Value Can't Be Negative";
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative And Zero Value";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
@@ -83,7 +83,7 @@ public class TestRectangle {
 
     @Test
     void testRectanglePerimeterThrowsExceptionIfAnySideValueIsNegative() {
-        String expectedExceptionMessage = "Side Value Can't Be Negative";
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative And Zero Value";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
@@ -96,6 +96,4 @@ public class TestRectangle {
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthNegative);
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthNegative);
     }
-
-
 }
