@@ -58,28 +58,21 @@ public class TestRectangle {
     }
 
     @Test
-    void testRectanglePerimeterIsZeroForBothSideValuesZero() {
-        int expectedPerimeter = 0;
+    void testRectanglePerimeterThrowsExceptionIfAnySideValueIsZero() {
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Zero Value";
 
-        Rectangle rectangle = new Rectangle(0, 0);
-        int actualPerimeter = (int) rectangle.perimeter();
+        Rectangle rectangleWithBothSidesZeros = new Rectangle(0, 0);
+        Rectangle rectangleWithLengthZero = new Rectangle(0, 3);
+        Rectangle rectangleWithBreadthZero = new Rectangle(2, 0);
+        String actualExceptionMessageWithBothSidesZeros = rectangleWithBothSidesZeros.perimeter().toString();
+        String actualExceptionMessageWithLengthZero = rectangleWithLengthZero.perimeter().toString();
+        String actualExceptionMessageWithBreadthZero = rectangleWithBreadthZero.perimeter().toString();
 
-        assertEquals(expectedPerimeter, actualPerimeter);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesZeros);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthZero);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthZero);
     }
 
-    @Test
-    void testRectanglePerimeterIsNotZeroForOneSideValueZero() {
-        int expectedPerimeterWithLengthZero = 8;
-        int expectedPerimeterWithBreadthZero = 10;
-
-        Rectangle rectangleWithLengthZero = new Rectangle(0, 4);
-        Rectangle rectangleWithBreadthZero = new Rectangle(5,0);
-        int actualPerimeterWithLengthZero = (int) rectangleWithLengthZero.perimeter();
-        int actualPerimeterWithBreadthZero = (int) rectangleWithBreadthZero.perimeter();
-
-        assertEquals(expectedPerimeterWithLengthZero, actualPerimeterWithLengthZero);
-        assertEquals(expectedPerimeterWithBreadthZero,actualPerimeterWithBreadthZero);
-    }
 
     @Test
     void testRectanglePerimeterThrowsExceptionIfAnySideValueIsNegative() {

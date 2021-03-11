@@ -31,6 +31,7 @@ public class Rectangle {
     public Object perimeter() {
         try {
             CheckForNegativeSideValueException();
+            CheckForZeroSideValueException();
         } catch (Exception ne) {
             return ne.getMessage();
         }
