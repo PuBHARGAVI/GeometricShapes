@@ -1,7 +1,7 @@
 package GeometricShapes;
 
-public class Square extends Rectangle{
+public class Square extends Rectangle {
     public Square(int side) {
-        super(side,side);
+        super(side, side);
     }
 }

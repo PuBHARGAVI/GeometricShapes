@@ -2,6 +2,7 @@ package TestGeometricShapes;
 
 import GeometricShapes.Square;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestSquare {
@@ -9,10 +10,10 @@ public class TestSquare {
     void testSquareAreaIsPositiveForPositiveSide() {
         int expectedArea = 25;
 
-        Square square =new Square(5);
+        Square square = new Square(5);
         int actualArea = (int) square.area();
 
-        assertEquals(expectedArea,actualArea);
+        assertEquals(expectedArea, actualArea);
     }
 
     @Test
@@ -39,10 +40,10 @@ public class TestSquare {
     void testSquarePerimeterIsPositiveForPositiveSide() {
         int expectedPerimeter = 20;
 
-        Square square =new Square(5);
+        Square square = new Square(5);
         int actualPerimeter = (int) square.perimeter();
 
-        assertEquals(expectedPerimeter,actualPerimeter);
+        assertEquals(expectedPerimeter, actualPerimeter);
     }
 
     @Test

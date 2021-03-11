@@ -2,6 +2,7 @@ package TestGeometricShapes;
 
 import GeometricShapes.Rectangle;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRectangle {
@@ -19,14 +20,11 @@ public class TestRectangle {
     void testRectangleAreaThrowsExceptionIfAnySideValueIsZero() {
         String expectedExceptionMessage = "Rectangle Sides Do Not Support Zero Value";
 
-        Rectangle rectangleWithBothSidesZeros = new Rectangle(0, 0);
         Rectangle rectangleWithLengthZero = new Rectangle(0, 3);
         Rectangle rectangleWithBreadthZero = new Rectangle(2, 0);
-        String actualExceptionMessageWithBothSidesZeros = rectangleWithBothSidesZeros.area().toString();
         String actualExceptionMessageWithLengthZero = rectangleWithLengthZero.area().toString();
         String actualExceptionMessageWithBreadthZero = rectangleWithBreadthZero.area().toString();
 
-        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesZeros);
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthZero);
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthZero);
     }
@@ -61,14 +59,11 @@ public class TestRectangle {
     void testRectanglePerimeterThrowsExceptionIfAnySideValueIsZero() {
         String expectedExceptionMessage = "Rectangle Sides Do Not Support Zero Value";
 
-        Rectangle rectangleWithBothSidesZeros = new Rectangle(0, 0);
         Rectangle rectangleWithLengthZero = new Rectangle(0, 3);
         Rectangle rectangleWithBreadthZero = new Rectangle(2, 0);
-        String actualExceptionMessageWithBothSidesZeros = rectangleWithBothSidesZeros.perimeter().toString();
         String actualExceptionMessageWithLengthZero = rectangleWithLengthZero.perimeter().toString();
         String actualExceptionMessageWithBreadthZero = rectangleWithBreadthZero.perimeter().toString();
 
-        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesZeros);
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthZero);
         assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthZero);
     }
