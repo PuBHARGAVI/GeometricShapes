@@ -16,24 +16,24 @@ public class TestRectangle {
     }
 
     @Test
-    void testRectangleAreaIsZeroForAnySideValuesZero() {
-        int expectedArea = 0;
+    void testRectangleAreaThrowsExceptionIfAnySideValueIsZero() {
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Zero Value";
 
-        Rectangle rectangleWithBothSidesZero = new Rectangle(0, 0);
-        Rectangle rectangleWithLengthZero = new Rectangle(0, 4);
-        Rectangle rectangleWithBreadthZero = new Rectangle(5, 0);
-        int actualAreaWithBothSidesZero = (int) rectangleWithBothSidesZero.area();
-        int actualAreaWithLengthZero = (int) rectangleWithLengthZero.area();
-        int actualAreaWithBreadthZero = (int) rectangleWithBreadthZero.area();
+        Rectangle rectangleWithBothSidesZeros = new Rectangle(0, 0);
+        Rectangle rectangleWithLengthZero = new Rectangle(0, 3);
+        Rectangle rectangleWithBreadthZero = new Rectangle(2, 0);
+        String actualExceptionMessageWithBothSidesZeros = rectangleWithBothSidesZeros.area().toString();
+        String actualExceptionMessageWithLengthZero = rectangleWithLengthZero.area().toString();
+        String actualExceptionMessageWithBreadthZero = rectangleWithBreadthZero.area().toString();
 
-        assertEquals(expectedArea, actualAreaWithBothSidesZero);
-        assertEquals(expectedArea, actualAreaWithLengthZero);
-        assertEquals(expectedArea, actualAreaWithBreadthZero);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBothSidesZeros);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithLengthZero);
+        assertEquals(expectedExceptionMessage, actualExceptionMessageWithBreadthZero);
     }
 
     @Test
     void testRectangleAreaThrowsExceptionIfAnySideValueIsNegative() {
-        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative And Zero Value";
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative Value";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
@@ -83,7 +83,7 @@ public class TestRectangle {
 
     @Test
     void testRectanglePerimeterThrowsExceptionIfAnySideValueIsNegative() {
-        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative And Zero Value";
+        String expectedExceptionMessage = "Rectangle Sides Do Not Support Negative Value";
 
         Rectangle rectangleWithBothSidesNegative = new Rectangle(-3, -2);
         Rectangle rectangleWithLengthNegative = new Rectangle(-3, 2);
